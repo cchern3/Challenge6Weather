@@ -1,0 +1,53 @@
+.findhistory {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .day {
+    background: #55dec5;
+    color: rgb(116, 115, 115);
+    list-style: none;
+    padding: 15px 25px;
+  }
+  
+  .firstfive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .headerforec {
+    padding: 20px 10px;
+    font-size: 2.5em;
+  }
+  
+  .todaysweatherforc ul {
+    list-style: none;
+    border: 1px solid;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  header {
+    background: #1a2846;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  /* Tablets - landscape and portrait */
+  @media screen and (max-width: 1180px) {
+    .firstfive {
+      flex-direction: column;
+    }
+    }
+  
+  /* Small screens */
+  @media screen and (max-width: 576px) {
+    .row.todaysweatherforc {
+      --bs-gutter-x: 0rem;
+      margin: 10px 0;
+    }
+    .todaysweatherforc ul {
+      margin: 10px 0;
+    }
+  }
