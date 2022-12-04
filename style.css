@@ -4,8 +4,8 @@
   }
   
   .day {
-    background: #55dec5;
-    color: rgb(116, 115, 115);
+    background: #070a63;
+    color: rgb(204, 204, 204);
     list-style: none;
     padding: 15px 25px;
   }
@@ -23,17 +23,18 @@
   
   .todaysweatherforc ul {
     list-style: none;
-    border: 1px solid;
+    border: 2px solid;
     padding: 20px;
     margin: 20px;
   }
   
   header {
-    background: #1a2846;
-    color: white;
+    background: #1a2c7a;
+    color: rgb(238, 238, 238);
     padding: 10px;
     margin-bottom: 10px;
   }
+  
   /* Tablets - landscape and portrait */
   @media screen and (max-width: 1180px) {
     .firstfive {
@@ -44,8 +45,7 @@
   /* Small screens */
   @media screen and (max-width: 576px) {
     .row.todaysweatherforc {
-      --bs-gutter-x: 0rem;
-      margin: 10px 0;
+      margin: 20px 0;
     }
     .todaysweatherforc ul {
       margin: 10px 0;
