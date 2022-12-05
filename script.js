@@ -6,13 +6,14 @@ var todaysweather = document.querySelector("#todaysweatherforc");
 var forecastofdays = document.querySelector("#firstfive");
 var previoussearches = [];
 
-// Display function for the dashboard
+//function for weather dashboard display
 
 function dashboard(event) {
     event.preventDefault();
     var cities = cityselection.value;
     weatherforc(cities);
 }
+//acquiring api of openweathermap for the cities and forecast data
 function weatherforc(cityName) {
     var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=cf52bda9505d69567000a24e4d4a1ffb&units=imperial`;
     fetch(url)
@@ -33,6 +34,7 @@ function weatherforc(cityName) {
                     }
                     displayCity();
                     console.log(allfive);
+                    //making list of temperature, speed, and humitdity and dates accordingly
                     todaysweather.innerHTML = 
                     `<ul>
         <li class="title">${nowData.name}: <span> ${moment(nowData.dt,"X").format(" MM/DD/YYYY")} </span></li>
@@ -61,6 +63,7 @@ function weatherforc(cityName) {
                 });
         });
 }
+//creating access of deployment from previous searches of cities 
 function displayCity() {
     if (localStorage.getItem("city")) {
         previoussearches = JSON.parse(localStorage.getItem("city"));
@@ -83,6 +86,7 @@ displayCity();
 
 searching.addEventListener("submit", dashboard); 
 
+//making function and button to clear the history of previous searches
 function clearingthehist() {
     localStorage.clear();
     priorcities.innerHTML = "";
@@ -91,7 +95,3 @@ function clearingthehist() {
 clearingbutton.addEventListener("click", function () {
     clearingthehist();
 });
-
-// if the clear button is clicked, search history buttons are removed and local storage cleared
-// localStorage.clear();
-// location.reload();
