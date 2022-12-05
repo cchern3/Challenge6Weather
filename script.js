@@ -33,7 +33,7 @@ function weatherforc(cityName) {
                         //storing city searches
                         localStorage.setItem("city", JSON.stringify(previoussearches));
                     }
-                    displayCity();
+                    showcasecity();
                     console.log(allfive);
                     //making list of temperature, speed, and humitdity and dates accordingly
                     todaysweather.innerHTML = 
@@ -44,11 +44,8 @@ function weatherforc(cityName) {
         <li>Wind: ${nowData.wind.speed}</li>
         <li>Humidity: ${nowData.main.humidity}</li>
                      </ul>`;
-    
-    
-    
+
                     var columns = "";
-            
                     for (var i = 1; i < allfive.list.length; i=i+8 ) {
                        
                         columns = columns +  `<ul class="col-12 col-xl-2 day">
@@ -65,7 +62,7 @@ function weatherforc(cityName) {
         });
 }
 //creating access of deployment from previous searches of cities 
-function displayCity() {
+function showcasecity() {
     if (localStorage.getItem("city")) {
         previoussearches = JSON.parse(localStorage.getItem("city"));
     }
@@ -83,7 +80,7 @@ function displayCity() {
         });
     }
 }
-displayCity();
+showcasecity();
 
 searching.addEventListener("submit", dashboard); 
 
