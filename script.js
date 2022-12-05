@@ -30,6 +30,7 @@ function weatherforc(cityName) {
                 .then(function (allfive) {
                     if (previoussearches.includes(nowData.name) === false) {
                         previoussearches.push(nowData.name);
+                        //storing city searches
                         localStorage.setItem("city", JSON.stringify(previoussearches));
                     }
                     displayCity();
