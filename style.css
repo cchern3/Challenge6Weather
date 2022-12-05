@@ -35,14 +35,13 @@
     margin-bottom: 10px;
   }
   
-  /* Tablets - landscape and portrait */
+  /* responsiveness for large and small screens */
   @media screen and (max-width: 1180px) {
     .firstfive {
       flex-direction: column;
     }
     }
   
-  /* Small screens */
   @media screen and (max-width: 576px) {
     .row.todaysweatherforc {
       margin: 20px 0;
