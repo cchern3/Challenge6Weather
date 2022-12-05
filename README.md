@@ -8,7 +8,7 @@ The user begins searching for the desired city in the search bar of the webpage 
 
 To examine and view the web porfolio page, click on the URL at the bottom of the README.md page. Additionally, the source code of the web page can be displayed in Chrome DevTools, which can be accessed by right clicking and selecting "Inspect" or by pressing 'Command+Option+I' (MacOS) or 'Control+Shift+I" (Windows).
 
-
+<img width="1440" alt="Screen Shot 2022-12-04 at 6 13 20 PM" src="https://user-images.githubusercontent.com/25966179/205543777-ad5513b7-7816-4109-989c-8e8009e3fc12.png">
 
 URL: https://cchern3.github.io/Challenge6Weather/
 
